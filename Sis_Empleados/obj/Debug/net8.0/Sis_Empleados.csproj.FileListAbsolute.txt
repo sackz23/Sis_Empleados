@@ -169,3 +169,4 @@ C:\Users\sergi\source\repos\Sis_Empleados\Sis_Empleados\obj\Debug\net8.0\refint\
 C:\Users\sergi\source\repos\Sis_Empleados\Sis_Empleados\obj\Debug\net8.0\Sis_Empleados.pdb
 C:\Users\sergi\source\repos\Sis_Empleados\Sis_Empleados\obj\Debug\net8.0\Sis_Empleados.genruntimeconfig.cache
 C:\Users\sergi\source\repos\Sis_Empleados\Sis_Empleados\obj\Debug\net8.0\ref\Sis_Empleados.dll
+C:\Users\sergi\source\repos\Sis_Empleados\Sis_Empleados\obj\Debug\net8.0\Sis_Empleados.sourcelink.json

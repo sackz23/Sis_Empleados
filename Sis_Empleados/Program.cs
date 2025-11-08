@@ -1,6 +1,12 @@
+using Microsoft.EntityFrameworkCore;
+using Sis_Empleados.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+// Agregamos el contexto al contenedor de dependencias
+builder.Services.AddDbContext<SistemaEmpleadosContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
