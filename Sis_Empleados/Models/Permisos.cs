@@ -4,16 +4,15 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Sis_Empleados.Models
 {
-    [Table("Turno")]
-    public class Turno
+    [Table("Permisos")]
+    public class Permiso
     {
         [Key]
-        public int Id_Turno { get; set; }
+        public int Id_Permiso { get; set; }
 
         [Required, MaxLength(50)]
-        public string Tipo_Turno { get; set; }
+        public string Nombre_Permiso { get; set; }
 
-        public virtual ICollection<Turno_Empleado> TurnosEmpleados { get; set; }
+        public virtual ICollection<Rol_Permiso> RolPermisos { get; set; }
     }
 }
-

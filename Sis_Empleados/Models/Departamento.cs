@@ -1,13 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Sis_Empleados.Models;
-
-public partial class Departamento
+namespace Sis_Empleados.Models
 {
-    public int IdDepartamento { get; set; }
+    [Table("Departamento")]
+    public class Departamento
+    {
+        [Key]
+        public int Id_Departamento { get; set; }
 
-    public string DepartamentoDeTrabajo { get; set; } = null!;
+        [Required, MaxLength(50)]
+        public string Departamento_De_Trabajo { get; set; }
 
-    public virtual ICollection<CargoEmpleado> CargoEmpleados { get; set; } = new List<CargoEmpleado>();
+        // Relaciones
+        public virtual ICollection<Cargo_Empleado> Cargos { get; set; }
+    }
 }

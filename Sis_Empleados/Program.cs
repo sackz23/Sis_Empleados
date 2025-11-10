@@ -4,10 +4,12 @@ using Sis_Empleados.Models;
 var builder = WebApplication.CreateBuilder(args);
 
 // Agregamos el contexto al contenedor de dependencias
-builder.Services.AddDbContext<SistemaEmpleadosContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("ConexionEmpleados")));
 
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddSession(); // Habilita sesiones
 
 var app = builder.Build();
 
@@ -23,7 +25,7 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
-
+app.UseSession();
 app.UseAuthorization();
 
 app.MapControllerRoute(

@@ -1,4 +1,4 @@
-namespace Sis_Empleados.Models
+﻿namespace Sis_Empleados.Models
 {
     public class ErrorViewModel
     {

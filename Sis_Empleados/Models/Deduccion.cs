@@ -1,19 +1,27 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Sis_Empleados.Models;
-
-public partial class Deduccion
+namespace Sis_Empleados.Models
 {
-    public int IdTotalDeducciones { get; set; }
+    [Table("Deduccion")]
+    public class Deduccion
+    {
+        [Key]
+        public int Id_TotalDeducciones { get; set; }
 
-    public int IdDetalleDeduccion { get; set; }
+        [Required]
+        public int Id_DetalleDeduccion { get; set; }
 
-    public int IdEmpleadoSalario { get; set; }
+        [Required]
+        public int Id_EmpleadoSalario { get; set; }
 
-    public int MontoDeduccion { get; set; }
+        [Required]
+        public int Monto_Deduccion { get; set; }
 
-    public virtual DetalleDeduccion IdDetalleDeduccionNavigation { get; set; } = null!;
+        [ForeignKey("Id_DetalleDeduccion")]
+        public virtual Detalle_Deduccion DetalleDeduccion { get; set; }
 
-    public virtual EmpleadoSalario IdEmpleadoSalarioNavigation { get; set; } = null!;
+        [ForeignKey("Id_EmpleadoSalario")]
+        public virtual Empleado_Salario EmpleadoSalario { get; set; }
+    }
 }
