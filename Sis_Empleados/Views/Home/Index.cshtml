@@ -1,8 +1,26 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Panel Principal";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="container mt-5">
+    <div class="card shadow p-4">
+        <h2 class="text-center mb-3">Bienvenido al Sistema de Empleados</h2>
+
+        <h4 class="text-center text-primary">
+            Hola, @ViewBag.Usuario
+        </h4>
+
+        <p class="text-center text-muted">
+            Rol asignado: @ViewBag.Rol
+        </p>
+
+        <hr />
+
+        <div class="text-center mt-4">
+            <a asp-controller="Empleados" asp-action="Index" class="btn btn-outline-primary m-2">👷‍♂️ Gestión de Empleados</a>
+            <a asp-controller="Departamentos" asp-action="Index" class="btn btn-outline-success m-2">🏢 Departamentos</a>
+            <a asp-controller="Usuarios" asp-action="Index" class="btn btn-outline-warning m-2">👤 Usuarios</a>
+            <a asp-controller="Auth" asp-action="Logout" class="btn btn-danger m-2">🚪 Cerrar sesión</a>
+        </div>
+    </div>
 </div>
