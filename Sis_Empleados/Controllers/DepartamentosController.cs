@@ -14,13 +14,37 @@ namespace Sis_Empleados.Controllers
         }
 
         // 🟢 LISTAR
-        public IActionResult Index()
+        public IActionResult Index(string buscar, int pagina = 1, int tamanoPagina = 10)
         {
             if (HttpContext.Session.GetInt32("UsuarioId") == null)
                 return RedirectToAction("Login", "Auth");
 
-            var departamentos = _context.Departamentos.ToList();
-            return View(departamentos);
+            var departamentos = _context.Departamentos.AsQueryable();
+
+            // 🔍 Filtro por nombre
+            if (!string.IsNullOrEmpty(buscar))
+            {
+                departamentos = departamentos.Where(d => d.Departamento_De_Trabajo.Contains(buscar));
+            }
+
+            // 📄 Total de registros
+            int totalRegistros = departamentos.Count();
+
+            // ⏱ Paginación
+            var departamentosPagina = departamentos
+                .OrderBy(d => d.Departamento_De_Trabajo)
+                .Skip((pagina - 1) * tamanoPagina)
+                .Take(tamanoPagina)
+                .ToList();
+
+            // 📦 Datos para la vista
+            ViewBag.Buscar = buscar;
+            ViewBag.PaginaActual = pagina;
+            ViewBag.TotalPaginas = (int)Math.Ceiling((double)totalRegistros / tamanoPagina);
+            ViewBag.TotalRegistros = totalRegistros;
+            ViewBag.TamanoPagina = tamanoPagina;
+
+            return View(departamentosPagina);
         }
 
         // 🟢 DETALLES
