@@ -14,6 +14,6 @@ namespace Sis_Empleados.Models
         public string Departamento_De_Trabajo { get; set; }
 
         // Relaciones
-        public virtual ICollection<Cargo_Empleado> Cargos { get; set; }
+        public virtual ICollection<Cargo_Empleado>? Cargos { get; set; } = new List<Cargo_Empleado>();
     }
 }
