@@ -1,0 +1,33 @@
+﻿@model Sis_Empleados.Models.Empleado
+
+@{
+    ViewData["Title"] = "Eliminar empleado";
+}
+
+<h2>¿Seguro que deseas eliminar este empleado?</h2>
+
+<div class="alert alert-danger mt-3">
+    <strong>Atención:</strong> Esta acción eliminará el registro permanentemente.
+</div>
+
+<div class="card p-4 mt-3 shadow-sm">
+    <dl class="row">
+        <dt class="col-sm-3">Nombre</dt>
+        <dd class="col-sm-9">@Model.Nombre</dd>
+
+        <dt class="col-sm-3">Cargo</dt>
+        <dd class="col-sm-9">@Model.CargoEmpleado.Cargo_De_Empleado</dd>
+
+        <dt class="col-sm-3">Departamento</dt>
+        <dd class="col-sm-9">@Model.CargoEmpleado.Departamento.Departamento_De_Trabajo</dd>
+
+        <dt class="col-sm-3">Email</dt>
+        <dd class="col-sm-9">@Model.Email</dd>
+    </dl>
+
+    <form asp-action="Delete" method="post">
+        <input type="hidden" asp-for="Id_Empleado" />
+        <button type="submit" class="btn btn-danger">Eliminar</button>
+        <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+    </form>
+</div>

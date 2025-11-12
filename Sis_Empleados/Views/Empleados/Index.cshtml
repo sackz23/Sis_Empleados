@@ -1,0 +1,101 @@
+﻿@model IEnumerable<Sis_Empleados.Models.Empleado>
+
+@{
+    ViewData["Title"] = "Lista de empleados";
+    int paginaActual = ViewBag.PaginaActual;
+    int totalPaginas = ViewBag.TotalPaginas;
+    string buscar = ViewBag.Buscar;
+    int? idDepartamento = ViewBag.IdDepartamento;
+}
+
+<h2>Lista de Empleados</h2>
+
+<!-- 🔎 Formulario de búsqueda y filtro -->
+<form method="get" asp-action="Index" class="row mb-3">
+    <div class="col-md-4">
+        <input type="text" name="buscar" class="form-control" placeholder="Buscar empleado, cargo o email..." value="@buscar" />
+    </div>
+
+    <div class="col-md-4">
+        <select name="idDepartamento" class="form-select">
+            <option value="">-- Todos los departamentos --</option>
+            @foreach (var d in ViewBag.Departamentos)
+            {
+                <option value="@d.Id_Departamento" selected="@(idDepartamento == d.Id_Departamento)">
+                    @d.Departamento_De_Trabajo
+                </option>
+            }
+        </select>
+    </div>
+
+    <div class="col-md-4">
+        <button type="submit" class="btn btn-primary">Filtrar</button>
+        <a asp-action="Index" class="btn btn-secondary">Limpiar</a>
+        <a asp-action="Create" class="btn btn-success float-end">+ Nuevo empleado</a>
+    </div>
+</form>
+
+<!-- 🧾 Tabla de empleados -->
+<table class="table table-bordered table-striped">
+    <thead class="table-dark">
+        <tr>
+            <th>Nombre</th>
+            <th>Cargo</th>
+            <th>Departamento</th>
+            <th>Email</th>
+            <th>Teléfono</th>
+            <th>Activo</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var emp in Model)
+        {
+            <tr>
+                <td>@emp.Nombre</td>
+                <td>@emp.CargoEmpleado.Cargo_De_Empleado</td>
+                <td>@emp.CargoEmpleado.Departamento.Departamento_De_Trabajo</td>
+                <td>@emp.Email</td>
+                <td>@emp.Telefono</td>
+                <td>@(emp.Activo ? "Sí" : "No")</td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@emp.Id_Empleado" class="btn btn-info btn-sm">Ver</a>
+                    <a asp-action="Edit" asp-route-id="@emp.Id_Empleado" class="btn btn-warning btn-sm">Editar</a>
+                    <a asp-action="Delete" asp-route-id="@emp.Id_Empleado" class="btn btn-danger btn-sm">Eliminar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<!-- 📄 Controles de paginación -->
+<nav aria-label="Paginación de empleados">
+    <ul class="pagination justify-content-center">
+        <li class="page-item @(paginaActual == 1 ? "disabled" : "")">
+            <a class="page-link"
+               asp-action="Index"
+               asp-route-pagina="@(paginaActual - 1)"
+               asp-route-buscar="@buscar"
+               asp-route-idDepartamento="@idDepartamento">Anterior</a>
+        </li>
+
+        @for (int i = 1; i <= totalPaginas; i++)
+        {
+            <li class="page-item @(i == paginaActual ? "active" : "")">
+                <a class="page-link"
+                   asp-action="Index"
+                   asp-route-pagina="@i"
+                   asp-route-buscar="@buscar"
+                   asp-route-idDepartamento="@idDepartamento">@i</a>
+            </li>
+        }
+
+        <li class="page-item @(paginaActual == totalPaginas ? "disabled" : "")">
+            <a class="page-link"
+               asp-action="Index"
+               asp-route-pagina="@(paginaActual + 1)"
+               asp-route-buscar="@buscar"
+               asp-route-idDepartamento="@idDepartamento">Siguiente</a>
+        </li>
+    </ul>
+</nav>

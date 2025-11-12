@@ -1,0 +1,55 @@
+﻿@model Sis_Empleados.Models.Empleado
+
+@{
+    ViewData["Title"] = "Editar empleado";
+}
+
+<h2>Editar empleado</h2>
+
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="Id_Empleado" />
+
+    <div class="mb-3">
+        <label>Nombre</label>
+        <input asp-for="Nombre" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label>Cargo</label>
+        <select asp-for="Id_CargoEmpleado" class="form-select">
+            <option value="">Seleccione un cargo</option>
+            @foreach (var c in ViewBag.Cargos)
+            {
+                <option value="@c.Id_CargoEmpleado">@c.Cargo_De_Empleado</option>
+            }
+        </select>
+    </div>
+
+    <div class="mb-3">
+        <label>Fecha de nacimiento</label>
+        <input asp-for="Fecha_Nacimiento" type="date" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label>Teléfono</label>
+        <input asp-for="Telefono" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label>Email</label>
+        <input asp-for="Email" type="email" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label>Fecha de ingreso</label>
+        <input asp-for="Fecha_Ingreso" type="date" class="form-control" />
+    </div>
+
+    <div class="form-check mb-3">
+        <input asp-for="Activo" class="form-check-input" type="checkbox" />
+        <label class="form-check-label">Activo</label>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Guardar cambios</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+</form>

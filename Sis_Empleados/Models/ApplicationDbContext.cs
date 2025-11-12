@@ -25,9 +25,4 @@ namespace Sis_Empleados.Models
         public DbSet<Detalle_Deduccion> DetalleDeducciones { get; set; }
         public DbSet<Deduccion> Deducciones { get; set; }
     }
-
-
-
-
-
 }

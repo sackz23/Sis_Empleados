@@ -18,7 +18,7 @@ namespace Sis_Empleados.Models
         public int Id_CargoEmpleado { get; set; }
 
         [ForeignKey("Id_CargoEmpleado")]
-        public virtual Cargo_Empleado CargoEmpleado { get; set; }
+        public virtual Cargo_Empleado? CargoEmpleado { get; set; }
 
         [Required]
         public DateTime Fecha_Nacimiento { get; set; }
@@ -35,8 +35,8 @@ namespace Sis_Empleados.Models
         public bool Activo { get; set; }
 
         // Relaciones
-        public virtual ICollection<Usuario> Usuarios { get; set; }
-        public virtual ICollection<Turno_Empleado> Turnos { get; set; }
-        public virtual ICollection<Empleado_Salario> Salarios { get; set; }
+        public virtual ICollection<Usuario>? Usuarios { get; set; } = new List<Usuario>();
+        public virtual ICollection<Turno_Empleado>? Turnos { get; set; } = new List<Turno_Empleado>();
+        public virtual ICollection<Empleado_Salario>? Salarios { get; set; } = new List<Empleado_Salario>();
     }
 }
