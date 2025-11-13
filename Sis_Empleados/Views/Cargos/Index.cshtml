@@ -1,0 +1,33 @@
+﻿@model IEnumerable<Sis_Empleados.Models.Cargo_Empleado>
+
+@{
+    ViewData["Title"] = "Cargos";
+}
+
+<h2>Cargos</h2>
+
+<a asp-action="Create" class="btn btn-primary mb-3">+ Nuevo cargo</a>
+
+<table class="table table-bordered table-striped">
+    <thead class="table-dark">
+        <tr>
+            <th>Cargo</th>
+            <th>Departamento</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var c in Model)
+        {
+            <tr>
+                <td>@c.Cargo_De_Empleado</td>
+                <td>@c.Departamento?.Departamento_De_Trabajo</td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@c.Id_CargoEmpleado" class="btn btn-info btn-sm">Ver</a>
+                    <a asp-action="Edit" asp-route-id="@c.Id_CargoEmpleado" class="btn btn-warning btn-sm">Editar</a>
+                    <a asp-action="Delete" asp-route-id="@c.Id_CargoEmpleado" class="btn btn-danger btn-sm">Eliminar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

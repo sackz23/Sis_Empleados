@@ -1,0 +1,27 @@
+﻿@model Sis_Empleados.Models.Cargo_Empleado
+
+@{
+    ViewData["Title"] = "Eliminar cargo";
+}
+
+<h2>¿Seguro que deseas eliminar este cargo?</h2>
+
+<div class="alert alert-warning mt-3">
+    Esta acción no se puede deshacer.
+</div>
+
+<div class="card p-4 mt-3 shadow-sm">
+    <dl class="row">
+        <dt class="col-sm-3">Cargo</dt>
+        <dd class="col-sm-9">@Model.Cargo_De_Empleado</dd>
+
+        <dt class="col-sm-3">Departamento</dt>
+        <dd class="col-sm-9">@Model.Departamento?.Departamento_De_Trabajo</dd>
+    </dl>
+
+    <form asp-action="Delete" method="post">
+        <input type="hidden" asp-for="Id_CargoEmpleado" />
+        <button type="submit" class="btn btn-danger">Eliminar</button>
+        <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+    </form>
+</div>

@@ -1,0 +1,33 @@
+﻿@model Sis_Empleados.Models.Cargo_Empleado
+
+@{
+    ViewData["Title"] = "Editar cargo";
+}
+
+<h2>Editar cargo</h2>
+
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="Id_CargoEmpleado" />
+
+    <div class="mb-3">
+        <label>Nombre del cargo</label>
+        <input asp-for="Cargo_De_Empleado" class="form-control" />
+        <span asp-validation-for="Cargo_De_Empleado" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label>Departamento</label>
+        <select asp-for="Id_Departamento" class="form-select">
+            @foreach (var dep in ViewBag.Departamentos)
+            {
+                <option value="@dep.Id_Departamento" selected="@(dep.Id_Departamento == Model.Id_Departamento)">
+                    @dep.Departamento_De_Trabajo
+                </option>
+            }
+        </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Guardar cambios</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+</form>
+

@@ -15,16 +15,17 @@ namespace Sis_Empleados.Models
         [Required]
         public int Id_Rol { get; set; }
 
-        [Required, MaxLength(50)]
+        [Required]
+        [MaxLength(50)]
         public string Nombre_Usuario { get; set; }
 
-        [Required]
-        public byte[] Contraseña { get; set; } // varbinary(64)
+        // ⚠️ SIN [Required]
+        public byte[]? Contraseña { get; set; } // varbinary(64)
 
         [ForeignKey("Id_Empleado")]
-        public virtual Empleado Empleado { get; set; }
+        public virtual Empleado? Empleado { get; set; }
 
         [ForeignKey("Id_Rol")]
-        public virtual Rol Rol { get; set; }
+        public virtual Rol? Rol { get; set; }
     }
 }

@@ -17,9 +17,9 @@ namespace Sis_Empleados.Models
         public string Cargo_De_Empleado { get; set; }
 
         [ForeignKey("Id_Departamento")]
-        public virtual Departamento Departamento { get; set; }
+        public virtual Departamento? Departamento { get; set; }
 
-        public virtual ICollection<Empleado> Empleados { get; set; }
+        public virtual ICollection<Empleado>? Empleados { get; set; }
     }
 }
 

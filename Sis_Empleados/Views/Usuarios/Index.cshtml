@@ -1,0 +1,36 @@
+﻿@model IEnumerable<Sis_Empleados.Models.Usuario>
+
+@{
+    ViewData["Title"] = "Usuarios";
+}
+
+<h2>Usuarios</h2>
+
+<a asp-action="Create" class="btn btn-primary mb-3">+ Nuevo usuario</a>
+
+<table class="table table-bordered table-striped">
+    <thead class="table-dark">
+        <tr>
+            <th>Empleado</th>
+            <th>Usuario</th>
+            <th>Rol</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var u in Model)
+        {
+            <tr>
+                <td>@u.Empleado?.Nombre</td>
+                <td>@u.Nombre_Usuario</td>
+                <td>@u.Rol?.Nombre_Rol</td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@u.Id_Usuario" class="btn btn-info btn-sm">Ver</a>
+                    <a asp-action="Edit" asp-route-id="@u.Id_Usuario" class="btn btn-warning btn-sm">Editar</a>
+                    <a asp-action="Delete" asp-route-id="@u.Id_Usuario" class="btn btn-danger btn-sm">Eliminar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+

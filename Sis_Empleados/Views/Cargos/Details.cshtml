@@ -1,0 +1,25 @@
+﻿@model Sis_Empleados.Models.Cargo_Empleado
+
+@{
+    ViewData["Title"] = "Detalles del cargo";
+}
+
+<h2>Detalles del cargo</h2>
+
+<div class="card p-4 shadow-sm mt-3">
+    <dl class="row">
+        <dt class="col-sm-3">ID</dt>
+        <dd class="col-sm-9">@Model.Id_CargoEmpleado</dd>
+
+        <dt class="col-sm-3">Cargo</dt>
+        <dd class="col-sm-9">@Model.Cargo_De_Empleado</dd>
+
+        <dt class="col-sm-3">Departamento</dt>
+        <dd class="col-sm-9">@Model.Departamento?.Departamento_De_Trabajo</dd>
+    </dl>
+
+    <div class="mt-3">
+        <a asp-action="Edit" asp-route-id="@Model.Id_CargoEmpleado" class="btn btn-warning">Editar</a>
+        <a asp-action="Index" class="btn btn-secondary">Volver</a>
+    </div>
+</div>

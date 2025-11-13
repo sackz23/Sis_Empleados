@@ -1,0 +1,49 @@
+﻿@model Sis_Empleados.Models.Usuario
+
+@{
+    ViewData["Title"] = "Editar usuario";
+}
+
+<h2>Editar usuario</h2>
+
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="Id_Usuario" />
+
+    <div class="mb-3">
+        <label>Empleado</label>
+        <select asp-for="Id_Empleado" class="form-select">
+            @foreach (var e in ViewBag.Empleados)
+            {
+                <option value="@e.Id_Empleado" selected="@(Model.Id_Empleado == e.Id_Empleado)">
+                    @e.Nombre
+                </option>
+            }
+        </select>
+    </div>
+
+    <div class="mb-3">
+        <label>Rol</label>
+        <select asp-for="Id_Rol" class="form-select">
+            @foreach (var r in ViewBag.Roles)
+            {
+                <option value="@r.Id_Rol" selected="@(Model.Id_Rol == r.Id_Rol)">
+                    @r.Nombre_Rol
+                </option>
+            }
+        </select>
+    </div>
+
+    <div class="mb-3">
+        <label>Nombre de usuario</label>
+        <input asp-for="Nombre_Usuario" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label>Nueva contraseña (opcional)</label>
+        <input type="password" name="password" class="form-control" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Guardar cambios</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+</form>
+
