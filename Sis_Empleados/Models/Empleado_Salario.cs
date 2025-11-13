@@ -20,11 +20,11 @@ namespace Sis_Empleados.Models
         public int Salario_Base { get; set; }
 
         [ForeignKey("Id_Empleado")]
-        public virtual Empleado Empleado { get; set; }
+        public virtual Empleado? Empleado { get; set; }
 
         [ForeignKey("Id_Periodo")]
-        public virtual Periodo Periodo { get; set; }
+        public virtual Periodo? Periodo { get; set; }
 
-        public virtual ICollection<Deduccion> Deducciones { get; set; }
+        public virtual ICollection<Deduccion>? Deducciones { get; set; }
     }
 }

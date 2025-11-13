@@ -1,0 +1,38 @@
+﻿@model Sis_Empleados.Models.Empleado_Salario
+
+<h2>Nuevo salario</h2>
+
+<form asp-action="Create" method="post">
+
+    <div class="mb-3">
+        <label>Empleado</label>
+        <select asp-for="Id_Empleado" class="form-select">
+            <option value="">Seleccione...</option>
+            @foreach (var e in ViewBag.Empleados)
+            {
+                <option value="@e.Id_Empleado">@e.Nombre</option>
+            }
+        </select>
+    </div>
+
+    <div class="mb-3">
+        <label>Período</label>
+        <select asp-for="Id_Periodo" class="form-select">
+            <option value="">Seleccione...</option>
+            @foreach (var p in ViewBag.Periodos)
+            {
+                <option value="@p.Id_Periodo">@p.Periodo_De_Pago</option>
+            }
+        </select>
+    </div>
+
+    <div class="mb-3">
+        <label>Salario Base</label>
+        <input asp-for="Salario_Base" class="form-control" />
+    </div>
+
+    <button class="btn btn-success">Guardar</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+
+</form>
+

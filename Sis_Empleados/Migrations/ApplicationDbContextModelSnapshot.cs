@@ -98,7 +98,8 @@ namespace Sis_Empleados.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id_DetalleDeduccion"));
 
                     b.Property<decimal>("Deduccion")
-                        .HasColumnType("decimal(18,2)");
+                        .HasPrecision(5, 2)
+                        .HasColumnType("decimal(5,2)");
 
                     b.Property<int>("Id_TipoDeducciones")
                         .HasColumnType("int");
@@ -324,7 +325,7 @@ namespace Sis_Empleados.Migrations
 
                     b.Property<byte[]>("Contraseña")
                         .IsRequired()
-                        .HasColumnType("varbinary(max)");
+                        .HasColumnType("varbinary(64)");
 
                     b.Property<int>("Id_Empleado")
                         .HasColumnType("int");

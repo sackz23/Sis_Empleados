@@ -13,6 +13,6 @@ namespace Sis_Empleados.Models
         [Required, MaxLength(50)]
         public string Nombre_Deduccion { get; set; }
 
-        public virtual ICollection<Detalle_Deduccion> DetallesDeduccion { get; set; }
+        public virtual ICollection<Detalle_Deduccion>? DetallesDeduccion { get; set; }
     }
 }

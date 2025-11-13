@@ -1,0 +1,19 @@
+﻿@model Sis_Empleados.Models.Tipo_Deducciones
+
+<h2>Eliminar tipo de deducción</h2>
+
+<div class="alert alert-danger">
+    ¿Está seguro que desea eliminar este tipo de deducción?
+</div>
+
+<div class="card p-3 mb-3">
+    <p><strong>Nombre:</strong> @Model.Nombre_Deduccion</p>
+</div>
+
+<form asp-action="Delete" method="post">
+    <input type="hidden" asp-for="Id_TipoDeducciones" />
+
+    <button class="btn btn-danger">Eliminar</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+</form>
+

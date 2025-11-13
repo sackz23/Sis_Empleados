@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -13,13 +14,13 @@ namespace Sis_Empleados.Models
         [Required]
         public int Id_TipoDeducciones { get; set; }
 
-        [Required]
-        [Column(TypeName = "decimal(18,2)")]
+        [Precision(5, 2)]
+        [Column(TypeName = "decimal(5,2)")]
         public decimal Deduccion { get; set; }
 
         [ForeignKey("Id_TipoDeducciones")]
-        public virtual Tipo_Deducciones TipoDeduccion { get; set; }
+        public virtual Tipo_Deducciones? TipoDeduccion { get; set; }
 
-        public virtual ICollection<Deduccion> Deducciones { get; set; }
+        public virtual ICollection<Deduccion>? Deducciones { get; set; }
     }
 }

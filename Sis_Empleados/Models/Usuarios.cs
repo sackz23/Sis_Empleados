@@ -19,8 +19,9 @@ namespace Sis_Empleados.Models
         [MaxLength(50)]
         public string Nombre_Usuario { get; set; }
 
-        // ⚠️ SIN [Required]
-        public byte[]? Contraseña { get; set; } // varbinary(64)
+        [Required]
+        [Column(TypeName = "varbinary(64)")]
+        public byte[] Contraseña { get; set; } = Array.Empty<byte>();
 
         [ForeignKey("Id_Empleado")]
         public virtual Empleado? Empleado { get; set; }

@@ -1,0 +1,17 @@
+﻿@model Sis_Empleados.Models.Tipo_Deducciones
+
+<h2>Nuevo tipo de deducción</h2>
+
+<form asp-action="Create" method="post">
+
+    <div class="mb-3">
+        <label>Nombre de la deducción</label>
+        <input asp-for="Nombre_Deduccion" class="form-control" />
+        <span asp-validation-for="Nombre_Deduccion" class="text-danger"></span>
+    </div>
+
+    <button class="btn btn-success">Guardar</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+
+</form>
+

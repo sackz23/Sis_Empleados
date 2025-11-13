@@ -1,0 +1,14 @@
+﻿@model Sis_Empleados.Models.Periodo
+
+<h2>@ViewData["Title"]</h2>
+
+<form asp-action="Create" method="post">
+    <div class="mb-3">
+        <label>Nombre del período</label>
+        <input asp-for="Periodo_De_Pago" class="form-control" />
+        <span asp-validation-for="Periodo_De_Pago" class="text-danger"></span>
+    </div>
+
+    <button class="btn btn-success">Guardar</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+</form>

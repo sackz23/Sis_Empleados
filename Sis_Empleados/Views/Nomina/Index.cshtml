@@ -1,0 +1,30 @@
+﻿@{
+    ViewData["Title"] = "Panel de Nómina";
+}
+
+<div class="container mt-5">
+    <div class="card shadow p-4">
+        <h2 class="text-center mb-3">Panel de Nómina</h2>
+
+        <p class="text-center text-muted">Seleccione una opción para gestionar la nómina de empleados.</p>
+
+        <hr />
+
+        <div class="text-center mt-4">
+
+            <a asp-controller="TipoDeducciones" asp-action="Index" class="btn btn-outline-primary m-2">🧾 Tipo de Deducciones</a>
+            <a asp-controller="DetalleDeduccion" asp-action="Index" class="btn btn-outline-secondary m-2">📄 Detalle Deducciones</a>
+            <a asp-controller="Periodos" asp-action="Index" class="btn btn-outline-success m-2">📅 Períodos</a>
+            <a asp-controller="EmpleadoSalario" asp-action="Index" class="btn btn-outline-warning m-2">💰 Salarios de Empleados</a>
+            <a asp-controller="Planilla" asp-action="Index" class="btn btn-outline-danger m-2">📊 Generar Planilla</a>
+
+        </div>
+
+        <hr />
+
+        <div class="text-center">
+            <a asp-controller="Home" asp-action="Index" class="btn btn-secondary mt-3">⬅ Volver al Panel Principal</a>
+        </div>
+
+    </div>
+</div>

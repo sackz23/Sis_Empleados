@@ -1,0 +1,32 @@
+﻿@model IEnumerable<Sis_Empleados.Models.PlanillaFila>
+
+@{
+    Layout = null;
+    <!-- IMPORTANTE -->
+}
+
+<h2>Planilla de salarios</h2>
+
+<p>Período: @ViewBag.Periodo</p>
+
+<table border="1" cellpadding="5" cellspacing="0" width="100%">
+    <thead style="background-color: #f2f2f2;">
+        <tr>
+            <th>Empleado</th>
+            <th>Salario Base</th>
+            <th>Total Deducciones</th>
+            <th>Salario Neto</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var fila in Model)
+        {
+            <tr>
+                <td>@fila.Empleado</td>
+                <td>C$ @fila.SalarioBase</td>
+                <td>C$ @fila.TotalDeducciones</td>
+                <td>C$ @fila.SalarioNeto</td>
+            </tr>
+        }
+    </tbody>
+</table>

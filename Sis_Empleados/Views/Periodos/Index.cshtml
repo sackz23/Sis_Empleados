@@ -1,0 +1,27 @@
+﻿@model IEnumerable<Sis_Empleados.Models.Periodo>
+
+<h2>Periodos de pago</h2>
+
+<a asp-action="Create" class="btn btn-primary mb-3">+ Nuevo período</a>
+
+<table class="table table-bordered table-striped">
+    <thead class="table-dark">
+        <tr>
+            <th>Período</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var p in Model)
+        {
+            <tr>
+                <td>@p.Periodo_De_Pago</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@p.Id_Periodo" class="btn btn-warning btn-sm">Editar</a>
+                    <a asp-action="Delete" asp-route-id="@p.Id_Periodo" class="btn btn-danger btn-sm">Eliminar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+

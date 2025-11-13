@@ -19,9 +19,9 @@ namespace Sis_Empleados.Models
         public int Monto_Deduccion { get; set; }
 
         [ForeignKey("Id_DetalleDeduccion")]
-        public virtual Detalle_Deduccion DetalleDeduccion { get; set; }
+        public virtual Detalle_Deduccion? DetalleDeduccion { get; set; }
 
         [ForeignKey("Id_EmpleadoSalario")]
-        public virtual Empleado_Salario EmpleadoSalario { get; set; }
+        public virtual Empleado_Salario? EmpleadoSalario { get; set; }
     }
 }

@@ -1,0 +1,32 @@
+﻿@model Sis_Empleados.Models.Detalle_Deduccion
+
+<h2>Nuevo detalle de deducción</h2>
+
+<form asp-action="Create" method="post">
+
+    <div class="mb-3">
+        <label>Tipo de deducción</label>
+        <select asp-for="Id_TipoDeducciones" class="form-select">
+            <option value="">Seleccione...</option>
+            @foreach (var t in ViewBag.Tipos)
+            {
+                <option value="@t.Id_TipoDeducciones">@t.Nombre_Deduccion</option>
+            }
+        </select>
+        <span asp-validation-for="Id_TipoDeducciones" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label>Valor (%)</label>
+        <div class="input-group">
+            <input asp-for="Deduccion" class="form-control" step="0.01" />
+            <span class="input-group-text">%</span>
+        </div>
+        <span asp-validation-for="Deduccion" class="text-danger"></span>
+    </div>
+
+    <button class="btn btn-success">Guardar</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+
+</form>
+

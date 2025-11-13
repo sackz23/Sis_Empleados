@@ -1,0 +1,24 @@
+﻿@model Sis_Empleados.Models.Empleado_Salario
+
+@{
+    ViewData["Title"] = "Eliminar salario";
+}
+
+<h2>Eliminar salario</h2>
+
+<div class="alert alert-danger">
+    ¿Está seguro que desea eliminar este registro de salario?
+</div>
+
+<div class="card p-3 mb-3">
+    <p><strong>Empleado:</strong> @Model.Empleado.Nombre</p>
+    <p><strong>Período:</strong> @Model.Periodo.Periodo_De_Pago</p>
+    <p><strong>Salario Base:</strong> C$ @Model.Salario_Base</p>
+</div>
+
+<form asp-action="Delete" method="post">
+    <input type="hidden" asp-for="Id_EmpleadoSalario" />
+
+    <button class="btn btn-danger">Eliminar</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+</form>

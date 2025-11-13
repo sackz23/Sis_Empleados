@@ -1,5 +1,8 @@
 using Microsoft.EntityFrameworkCore;
 using Sis_Empleados.Models;
+using System.Globalization;
+using Rotativa.AspNetCore;
+using OfficeOpenXml;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,6 +15,14 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddSession(); // Habilita sesiones
 
 var app = builder.Build();
+
+// CONFIGURACIÓN DE CULTURA PARA DECIMALES
+var cultureInfo = new CultureInfo("en-US");
+cultureInfo.NumberFormat.NumberDecimalSeparator = ".";
+cultureInfo.NumberFormat.NumberGroupSeparator = ",";
+
+CultureInfo.DefaultThreadCurrentCulture = cultureInfo;
+CultureInfo.DefaultThreadCurrentUICulture = cultureInfo;
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())

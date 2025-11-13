@@ -342,3 +342,13 @@ D:\repos\Sis_Empleados\Sis_Empleados\obj\Debug\net8.0\Sis_Empleados.pdb
 D:\repos\Sis_Empleados\Sis_Empleados\obj\Debug\net8.0\Sis_Empleados.genruntimeconfig.cache
 D:\repos\Sis_Empleados\Sis_Empleados\obj\Debug\net8.0\ref\Sis_Empleados.dll
 D:\repos\Sis_Empleados\Sis_Empleados\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+D:\repos\Sis_Empleados\Sis_Empleados\obj\Debug\net8.0\Sis_Empleados.MvcApplicationPartsAssemblyInfo.cs
+D:\repos\Sis_Empleados\Sis_Empleados\bin\Debug\net8.0\EPPlus.dll
+D:\repos\Sis_Empleados\Sis_Empleados\bin\Debug\net8.0\EPPlus.Interfaces.dll
+D:\repos\Sis_Empleados\Sis_Empleados\bin\Debug\net8.0\Microsoft.Extensions.Configuration.FileExtensions.dll
+D:\repos\Sis_Empleados\Sis_Empleados\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Json.dll
+D:\repos\Sis_Empleados\Sis_Empleados\bin\Debug\net8.0\Microsoft.IO.RecyclableMemoryStream.dll
+D:\repos\Sis_Empleados\Sis_Empleados\bin\Debug\net8.0\Rotativa.AspNetCore.dll
+D:\repos\Sis_Empleados\Sis_Empleados\bin\Debug\net8.0\System.Security.Cryptography.Pkcs.dll
+D:\repos\Sis_Empleados\Sis_Empleados\bin\Debug\net8.0\System.Security.Cryptography.Xml.dll
+D:\repos\Sis_Empleados\Sis_Empleados\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll

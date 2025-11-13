@@ -1,0 +1,19 @@
+﻿@model Sis_Empleados.Models.Detalle_Deduccion
+
+<h2>Eliminar detalle</h2>
+
+<div class="alert alert-danger">
+    ¿Está seguro de eliminar este detalle de deducción?
+</div>
+
+<div class="card p-3 mb-3">
+    <p><strong>Tipo:</strong> @Model.TipoDeduccion.Nombre_Deduccion</p>
+    <p><strong>Valor:</strong> @Model.Deduccion</p>
+</div>
+
+<form asp-action="Delete" method="post">
+    <input type="hidden" asp-for="Id_DetalleDeduccion" />
+
+    <button class="btn btn-danger">Eliminar</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+</form>

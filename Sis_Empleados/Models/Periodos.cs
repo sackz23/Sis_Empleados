@@ -13,6 +13,6 @@ namespace Sis_Empleados.Models
         [Required, MaxLength(50)]
         public string Periodo_De_Pago { get; set; }
 
-        public virtual ICollection<Empleado_Salario> EmpleadoSalarios { get; set; }
+        public virtual ICollection<Empleado_Salario>? EmpleadoSalarios { get; set; }
     }
 }

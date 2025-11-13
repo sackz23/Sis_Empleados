@@ -1,0 +1,19 @@
+﻿@{
+    ViewData["Title"] = "Generar Planilla";
+}
+
+<h2>Generar Planilla</h2>
+
+<form method="get" asp-action="Generar">
+    <label>Seleccione un período:</label>
+    <select name="idPeriodo" class="form-select" required>
+        <option value="">Seleccione...</option>
+        @foreach (var p in ViewBag.Periodos)
+        {
+            <option value="@p.Id_Periodo">@p.Periodo_De_Pago</option>
+        }
+    </select>
+
+    <button class="btn btn-primary mt-3">Generar</button>
+</form>
+
