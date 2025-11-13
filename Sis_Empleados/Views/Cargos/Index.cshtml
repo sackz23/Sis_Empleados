@@ -2,13 +2,32 @@
 
 @{
     ViewData["Title"] = "Cargos";
+    string buscar = ViewBag.Buscar;
+    int paginaActual = ViewBag.PaginaActual;
+    int totalPaginas = ViewBag.TotalPaginas;
 }
 
-<h2>Cargos</h2>
+<h2>Gestión de Cargos</h2>
 
-<a asp-action="Create" class="btn btn-primary mb-3">+ Nuevo cargo</a>
+<!-- 🔍 Búsqueda -->
+<form method="get" asp-action="Index" class="row mb-3">
+    <div class="col-md-6">
+        <input type="text" name="buscar" class="form-control"
+               placeholder="Buscar cargo o departamento..." value="@buscar" />
+    </div>
 
-<table class="table table-bordered table-striped">
+    <div class="col-md-6">
+        <button class="btn btn-primary">Buscar</button>
+        <a asp-action="Index" class="btn btn-secondary">Limpiar</a>
+
+        <a asp-action="Create" class="btn btn-success float-end">
+            + Nuevo cargo
+        </a>
+    </div>
+</form>
+
+<!-- 🧾 Tabla -->
+<table class="table table-striped table-bordered">
     <thead class="table-dark">
         <tr>
             <th>Cargo</th>
@@ -31,3 +50,43 @@
         }
     </tbody>
 </table>
+
+<!-- 📄 Paginación -->
+<nav>
+    <ul class="pagination justify-content-center">
+
+        <!-- Anterior -->
+        <li class="page-item @(paginaActual == 1 ? "disabled" : "")">
+            <a class="page-link"
+               asp-action="Index"
+               asp-route-pagina="@(paginaActual - 1)"
+               asp-route-buscar="@buscar">
+                Anterior
+            </a>
+        </li>
+
+        <!-- Números -->
+        @for (int i = 1; i <= totalPaginas; i++)
+        {
+            <li class="page-item @(i == paginaActual ? "active" : "")">
+                <a class="page-link"
+                   asp-action="Index"
+                   asp-route-pagina="@i"
+                   asp-route-buscar="@buscar">
+                    @i
+                </a>
+            </li>
+        }
+
+        <!-- Siguiente -->
+        <li class="page-item @(paginaActual == totalPaginas ? "disabled" : "")">
+            <a class="page-link"
+               asp-action="Index"
+               asp-route-pagina="@(paginaActual + 1)"
+               asp-route-buscar="@buscar">
+                Siguiente
+            </a>
+        </li>
+
+    </ul>
+</nav>

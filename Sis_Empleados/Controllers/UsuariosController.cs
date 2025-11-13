@@ -16,7 +16,7 @@ namespace Sis_Empleados.Controllers
         }
 
         // 🟢 LISTAR
-        public IActionResult Index()
+        public IActionResult Index(string buscar, int pagina = 1, int tamanoPagina = 10)
         {
             if (HttpContext.Session.GetInt32("UsuarioId") == null)
                 return RedirectToAction("Login", "Auth");
@@ -24,10 +24,36 @@ namespace Sis_Empleados.Controllers
             var usuarios = _context.Usuarios
                 .Include(u => u.Empleado)
                 .Include(u => u.Rol)
+                .AsQueryable();
+
+            // 🔍 Búsqueda
+            if (!string.IsNullOrEmpty(buscar))
+            {
+                usuarios = usuarios.Where(u =>
+                    u.Nombre_Usuario.Contains(buscar) ||
+                    u.Empleado.Nombre.Contains(buscar) ||
+                    u.Rol.Nombre_Rol.Contains(buscar)
+                );
+            }
+
+            // 📄 Total de registros filtrados
+            int totalRegistros = usuarios.Count();
+
+            // ⏭ Paginación
+            var usuariosPagina = usuarios
+                .OrderBy(u => u.Nombre_Usuario)
+                .Skip((pagina - 1) * tamanoPagina)
+                .Take(tamanoPagina)
                 .ToList();
 
-            return View(usuarios);
+            // 📦 Enviar datos a la vista
+            ViewBag.Buscar = buscar;
+            ViewBag.PaginaActual = pagina;
+            ViewBag.TotalPaginas = (int)Math.Ceiling((double)totalRegistros / tamanoPagina);
+
+            return View(usuariosPagina);
         }
+
 
         // 🟢 DETALLES
         public IActionResult Details(int id)
