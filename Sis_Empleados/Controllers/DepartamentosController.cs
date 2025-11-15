@@ -13,7 +13,7 @@ namespace Sis_Empleados.Controllers
             _context = context;
         }
 
-        // 🟢 LISTAR
+        // LISTAR
         public IActionResult Index(string buscar, int pagina = 1, int tamanoPagina = 10)
         {
             if (HttpContext.Session.GetInt32("UsuarioId") == null)
@@ -21,23 +21,23 @@ namespace Sis_Empleados.Controllers
 
             var departamentos = _context.Departamentos.AsQueryable();
 
-            // 🔍 Filtro por nombre
+            // Filtro por nombre
             if (!string.IsNullOrEmpty(buscar))
             {
                 departamentos = departamentos.Where(d => d.Departamento_De_Trabajo.Contains(buscar));
             }
 
-            // 📄 Total de registros
+            //  Total de registros
             int totalRegistros = departamentos.Count();
 
-            // ⏱ Paginación
+            //  Paginación
             var departamentosPagina = departamentos
                 .OrderBy(d => d.Departamento_De_Trabajo)
                 .Skip((pagina - 1) * tamanoPagina)
                 .Take(tamanoPagina)
                 .ToList();
 
-            // 📦 Datos para la vista
+            //  Datos para la vista
             ViewBag.Buscar = buscar;
             ViewBag.PaginaActual = pagina;
             ViewBag.TotalPaginas = (int)Math.Ceiling((double)totalRegistros / tamanoPagina);
@@ -47,7 +47,7 @@ namespace Sis_Empleados.Controllers
             return View(departamentosPagina);
         }
 
-        // 🟢 DETALLES
+        //  DETALLES
         public IActionResult Details(int id)
         {
             var departamento = _context.Departamentos.FirstOrDefault(d => d.Id_Departamento == id);
@@ -57,7 +57,7 @@ namespace Sis_Empleados.Controllers
             return View(departamento);
         }
 
-        // 🟢 CREAR (GET)
+        // CREAR (GET)
         public IActionResult Create()
         {
             if (HttpContext.Session.GetInt32("UsuarioId") == null)
@@ -66,7 +66,7 @@ namespace Sis_Empleados.Controllers
             return View();
         }
 
-        // 🟢 CREAR (POST)
+        // CREAR (POST)
         [HttpPost]
         public IActionResult Create(Departamento departamento)
         {
@@ -88,7 +88,7 @@ namespace Sis_Empleados.Controllers
             return View(departamento);
         }
 
-        // 🟢 EDITAR (GET)
+        // EDITAR (GET)
         public IActionResult Edit(int id)
         {
             var departamento = _context.Departamentos.Find(id);
@@ -98,7 +98,7 @@ namespace Sis_Empleados.Controllers
             return View(departamento);
         }
 
-        // 🟢 EDITAR (POST)
+        // EDITAR (POST)
         [HttpPost]
         public IActionResult Edit(Departamento departamento)
         {
@@ -112,7 +112,7 @@ namespace Sis_Empleados.Controllers
             return View(departamento);
         }
 
-        // 🟢 ELIMINAR (GET)
+        // ELIMINAR (GET)
         public IActionResult Delete(int id)
         {
             var departamento = _context.Departamentos.FirstOrDefault(d => d.Id_Departamento == id);
@@ -122,7 +122,7 @@ namespace Sis_Empleados.Controllers
             return View(departamento);
         }
 
-        // 🟢 ELIMINAR (POST)
+        // ELIMINAR (POST)
         [HttpPost, ActionName("Delete")]
         public IActionResult DeleteConfirmed(int id)
         {

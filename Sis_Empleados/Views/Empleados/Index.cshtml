@@ -10,7 +10,7 @@
 
 <h2>Lista de Empleados</h2>
 
-<!-- 🔎 Formulario de búsqueda y filtro -->
+<!-- Formulario de búsqueda y filtro -->
 <form method="get" asp-action="Index" class="row mb-3">
     <div class="col-md-4">
         <input type="text" name="buscar" class="form-control" placeholder="Buscar empleado, cargo o email..." value="@buscar" />
@@ -35,7 +35,7 @@
     </div>
 </form>
 
-<!-- 🧾 Tabla de empleados -->
+<!-- Tabla de empleados -->
 <table class="table table-bordered table-striped">
     <thead class="table-dark">
         <tr>
@@ -68,7 +68,7 @@
     </tbody>
 </table>
 
-<!-- 📄 Controles de paginación -->
+<!-- Controles de paginación -->
 <nav aria-label="Paginación de empleados">
     <ul class="pagination justify-content-center">
         <li class="page-item @(paginaActual == 1 ? "disabled" : "")">

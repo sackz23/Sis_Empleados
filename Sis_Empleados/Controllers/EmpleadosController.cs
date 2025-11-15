@@ -13,7 +13,7 @@ namespace Sis_Empleados.Controllers
             _context = context;
         }
 
-        // 🟢 LISTAR EMPLEADOS
+        // LISTAR EMPLEADOS
         public IActionResult Index(string buscar, int? idDepartamento, int pagina = 1, int tamanoPagina = 10)
         {
             if (HttpContext.Session.GetInt32("UsuarioId") == null)
@@ -26,7 +26,7 @@ namespace Sis_Empleados.Controllers
                 .ThenInclude(c => c.Departamento)
                 .AsQueryable();
 
-            // 🔍 Búsqueda
+            // Búsqueda
             if (!string.IsNullOrEmpty(buscar))
             {
                 empleados = empleados.Where(e =>
@@ -35,23 +35,23 @@ namespace Sis_Empleados.Controllers
                     e.CargoEmpleado.Cargo_De_Empleado.Contains(buscar));
             }
 
-            // 🏢 Filtro por departamento
+            // Filtro por departamento
             if (idDepartamento.HasValue)
             {
                 empleados = empleados.Where(e => e.CargoEmpleado.Departamento.Id_Departamento == idDepartamento);
             }
 
-            // 📄 Total de registros
+            // Total de registros
             int totalRegistros = empleados.Count();
 
-            // ⏱ Paginación
+            // Paginación
             var empleadosPagina = empleados
                 .OrderBy(e => e.Nombre)
                 .Skip((pagina - 1) * tamanoPagina)
                 .Take(tamanoPagina)
                 .ToList();
 
-            // 📦 Pasar datos a la vista
+            // Pasar datos a la vista
             ViewBag.PaginaActual = pagina;
             ViewBag.TamanoPagina = tamanoPagina;
             ViewBag.TotalRegistros = totalRegistros;
@@ -63,7 +63,7 @@ namespace Sis_Empleados.Controllers
         }
 
 
-        // 🟢 DETALLES
+        // DETALLES
         public IActionResult Details(int id)
         {
             var empleado = _context.Empleados
@@ -77,7 +77,7 @@ namespace Sis_Empleados.Controllers
             return View(empleado);
         }
 
-        // 🟢 CREAR (GET)
+        // CREAR (GET)
         public IActionResult Create()
         {
             if (HttpContext.Session.GetInt32("UsuarioId") == null)
@@ -95,7 +95,7 @@ namespace Sis_Empleados.Controllers
             return View();
         }
 
-        // 🟢 CREAR (POST)
+        // CREAR (POST)
         [HttpPost]
         public IActionResult Create(Empleado empleado)
         {
@@ -129,7 +129,7 @@ namespace Sis_Empleados.Controllers
 
 
 
-        // 🟢 EDITAR (GET)
+        // EDITAR (GET)
         public IActionResult Edit(int id)
         {
             var empleado = _context.Empleados.Find(id);
@@ -140,7 +140,7 @@ namespace Sis_Empleados.Controllers
             return View(empleado);
         }
 
-        // 🟢 EDITAR (POST)
+        // EDITAR (POST)
         [HttpPost]
         public IActionResult Edit(Empleado empleado)
         {
@@ -153,7 +153,7 @@ namespace Sis_Empleados.Controllers
             return View(empleado);
         }
 
-        // 🟢 ELIMINAR (GET)
+        // ELIMINAR (GET)
         public IActionResult Delete(int id)
         {
             var empleado = _context.Empleados
@@ -167,7 +167,7 @@ namespace Sis_Empleados.Controllers
             return View(empleado);
         }
 
-        // 🟢 ELIMINAR (POST)
+        // ELIMINAR (POST)
         [HttpPost, ActionName("Delete")]
         public IActionResult DeleteConfirmed(int id)
         {

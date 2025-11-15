@@ -108,14 +108,14 @@ namespace Sis_Empleados.Controllers
             );
         }
 
-        // 🟢 Mostrar pantalla para seleccionar período
+        // Mostrar pantalla para seleccionar período
         public IActionResult Index()
         {
             ViewBag.Periodos = _context.Periodos.ToList();
             return View();
         }
 
-        // 🟢 Generar planilla
+        // Generar planilla
         public IActionResult Generar(int idPeriodo)
         {
             ViewBag.IdPeriodo = idPeriodo;

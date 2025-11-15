@@ -13,7 +13,7 @@ namespace Sis_Empleados.Controllers
             _context = context;
         }
 
-        // 🟢 LISTAR
+        // LISTAR
         public IActionResult Index(string buscar, int pagina = 1, int tamanoPagina = 10)
         {
             if (HttpContext.Session.GetInt32("UsuarioId") == null)
@@ -23,7 +23,7 @@ namespace Sis_Empleados.Controllers
                 .Include(c => c.Departamento)
                 .AsQueryable();
 
-            // 🔍 FILTRO DE BÚSQUEDA
+            // FILTRO DE BÚSQUEDA
             if (!string.IsNullOrEmpty(buscar))
             {
                 cargos = cargos.Where(c =>
@@ -32,17 +32,17 @@ namespace Sis_Empleados.Controllers
                 );
             }
 
-            // 📌 TOTAL REGISTROS
+            // TOTAL REGISTROS
             int totalRegistros = cargos.Count();
 
-            // ⏭ PAGINACIÓN
+            // PAGINACIÓN
             var cargosPagina = cargos
                 .OrderBy(c => c.Cargo_De_Empleado)
                 .Skip((pagina - 1) * tamanoPagina)
                 .Take(tamanoPagina)
                 .ToList();
 
-            // 📦 VARIABLES A LA VISTA
+            // VARIABLES A LA VISTA
             ViewBag.Buscar = buscar;
             ViewBag.PaginaActual = pagina;
             ViewBag.TotalPaginas = (int)Math.Ceiling((double)totalRegistros / tamanoPagina);
@@ -50,7 +50,7 @@ namespace Sis_Empleados.Controllers
             return View(cargosPagina);
         }
 
-        // 🟢 DETALLES
+        // DETALLES
         public IActionResult Details(int id)
         {
             var cargo = _context.CargosEmpleados
@@ -63,7 +63,7 @@ namespace Sis_Empleados.Controllers
             return View(cargo);
         }
 
-        // 🟢 CREAR (GET)
+        // CREAR (GET)
         public IActionResult Create()
         {
             if (HttpContext.Session.GetInt32("UsuarioId") == null)
@@ -73,7 +73,7 @@ namespace Sis_Empleados.Controllers
             return View();
         }
 
-        // 🟢 CREAR (POST)
+        // CREAR (POST)
         [HttpPost]
         public IActionResult Create(Cargo_Empleado cargo)
         {
@@ -88,7 +88,7 @@ namespace Sis_Empleados.Controllers
             return View(cargo);
         }
 
-        // 🟢 EDITAR (GET)
+        // EDITAR (GET)
         public IActionResult Edit(int id)
         {
             var cargo = _context.CargosEmpleados.Find(id);
@@ -99,7 +99,7 @@ namespace Sis_Empleados.Controllers
             return View(cargo);
         }
 
-        // 🟢 EDITAR (POST)
+        // EDITAR (POST)
         [HttpPost]
         public IActionResult Edit(Cargo_Empleado cargo)
         {
@@ -114,7 +114,7 @@ namespace Sis_Empleados.Controllers
             return View(cargo);
         }
 
-        // 🟢 ELIMINAR (GET)
+        // ELIMINAR (GET)
         public IActionResult Delete(int id)
         {
             var cargo = _context.CargosEmpleados
@@ -127,7 +127,7 @@ namespace Sis_Empleados.Controllers
             return View(cargo);
         }
 
-        // 🟢 ELIMINAR (POST)
+        // ELIMINAR (POST)
         [HttpPost, ActionName("Delete")]
         public IActionResult DeleteConfirmed(int id)
         {

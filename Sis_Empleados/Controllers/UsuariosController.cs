@@ -15,7 +15,7 @@ namespace Sis_Empleados.Controllers
             _context = context;
         }
 
-        // 🟢 LISTAR
+        // LISTAR
         public IActionResult Index(string buscar, int pagina = 1, int tamanoPagina = 10)
         {
             if (HttpContext.Session.GetInt32("UsuarioId") == null)
@@ -26,7 +26,7 @@ namespace Sis_Empleados.Controllers
                 .Include(u => u.Rol)
                 .AsQueryable();
 
-            // 🔍 Búsqueda
+            // Búsqueda
             if (!string.IsNullOrEmpty(buscar))
             {
                 usuarios = usuarios.Where(u =>
@@ -36,17 +36,17 @@ namespace Sis_Empleados.Controllers
                 );
             }
 
-            // 📄 Total de registros filtrados
+            // Total de registros filtrados
             int totalRegistros = usuarios.Count();
 
-            // ⏭ Paginación
+            // Paginación
             var usuariosPagina = usuarios
                 .OrderBy(u => u.Nombre_Usuario)
                 .Skip((pagina - 1) * tamanoPagina)
                 .Take(tamanoPagina)
                 .ToList();
 
-            // 📦 Enviar datos a la vista
+            // Enviar datos a la vista
             ViewBag.Buscar = buscar;
             ViewBag.PaginaActual = pagina;
             ViewBag.TotalPaginas = (int)Math.Ceiling((double)totalRegistros / tamanoPagina);
@@ -55,7 +55,7 @@ namespace Sis_Empleados.Controllers
         }
 
 
-        // 🟢 DETALLES
+        // DETALLES
         public IActionResult Details(int id)
         {
             var usuario = _context.Usuarios
@@ -69,7 +69,7 @@ namespace Sis_Empleados.Controllers
             return View(usuario);
         }
 
-        // 🟢 CREAR (GET)
+        // CREAR (GET)
         public IActionResult Create()
         {
             ViewBag.Empleados = _context.Empleados
@@ -80,7 +80,7 @@ namespace Sis_Empleados.Controllers
             return View();
         }
 
-        // 🟢 CREAR (POST)
+        // CREAR (POST)
         [HttpPost]
         public IActionResult Create(Usuario usuario, string password)
         {
@@ -107,7 +107,7 @@ namespace Sis_Empleados.Controllers
             return View(usuario);
         }
 
-        // 🟢 EDITAR (GET)
+        // EDITAR (GET)
         public IActionResult Edit(int id)
         {
             var usuario = _context.Usuarios.Find(id);
@@ -119,7 +119,7 @@ namespace Sis_Empleados.Controllers
             return View(usuario);
         }
 
-        // 🟢 EDITAR (POST)
+        // EDITAR (POST)
         [HttpPost]
         public IActionResult Edit(Usuario usuario, string? password)
         {
@@ -149,7 +149,7 @@ namespace Sis_Empleados.Controllers
             return View(usuario);
         }
 
-        // 🟢 ELIMINAR (GET)
+        // ELIMINAR (GET)
         public IActionResult Delete(int id)
         {
             var usuario = _context.Usuarios
@@ -163,7 +163,7 @@ namespace Sis_Empleados.Controllers
             return View(usuario);
         }
 
-        // 🟢 ELIMINAR (POST)
+        // ELIMINAR (POST)
         [HttpPost, ActionName("Delete")]
         public IActionResult DeleteConfirmed(int id)
         {
