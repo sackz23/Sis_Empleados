@@ -2,29 +2,103 @@
     ViewData["Title"] = "Panel de Nómina";
 }
 
-<div class="container mt-5">
-    <div class="card shadow p-4">
-        <h2 class="text-center mb-3">Panel de Nómina</h2>
+<div class="container py-5">
 
-        <p class="text-center text-muted">Seleccione una opción para gestionar la nómina de empleados.</p>
+    <h2 class="text-center fw-bold text-dark mb-4">Panel de Nómina</h2>
+    <p class="text-center text-muted">Gestione salarios, deducciones y planilla</p>
 
-        <hr />
+    <div class="row g-4">
 
-        <div class="text-center mt-4">
-
-            <a asp-controller="TipoDeducciones" asp-action="Index" class="btn btn-outline-primary m-2">🧾 Tipo de Deducciones</a>
-            <a asp-controller="DetalleDeduccion" asp-action="Index" class="btn btn-outline-secondary m-2">📄 Detalle Deducciones</a>
-            <a asp-controller="Periodos" asp-action="Index" class="btn btn-outline-success m-2">📅 Períodos</a>
-            <a asp-controller="EmpleadoSalario" asp-action="Index" class="btn btn-outline-warning m-2">💰 Salarios de Empleados</a>
-            <a asp-controller="Planilla" asp-action="Index" class="btn btn-outline-danger m-2">📊 Generar Planilla</a>
-
+        <div class="col-md-4">
+            <div class="card shadow-sm border-0 dashboard-card">
+                <div class="card-body text-center">
+                    <div class="icon-circle bg-primary mb-3">
+                        <i class="bi bi-list-check"></i>
+                    </div>
+                    <h5 class="fw-bold">Tipos de Deducciones</h5>
+                    <a asp-controller="TipoDeducciones" asp-action="Index" class="btn btn-primary w-100">Entrar</a>
+                </div>
+            </div>
         </div>
 
-        <hr />
+        <div class="col-md-4">
+            <div class="card shadow-sm border-0 dashboard-card">
+                <div class="card-body text-center">
+                    <div class="icon-circle bg-secondary mb-3">
+                        <i class="bi bi-clipboard-data"></i>
+                    </div>
+                    <h5 class="fw-bold">Detalle de Deducciones</h5>
+                    <a asp-controller="DetalleDeduccion" asp-action="Index" class="btn btn-secondary w-100">Entrar</a>
+                </div>
+            </div>
+        </div>
 
-        <div class="text-center">
-            <a asp-controller="Home" asp-action="Index" class="btn btn-secondary mt-3">⬅ Volver al Panel Principal</a>
+        <div class="col-md-4">
+            <div class="card shadow-sm border-0 dashboard-card">
+                <div class="card-body text-center">
+                    <div class="icon-circle bg-success mb-3">
+                        <i class="bi bi-calendar-date"></i>
+                    </div>
+                    <h5 class="fw-bold">Períodos</h5>
+                    <a asp-controller="Periodos" asp-action="Index" class="btn btn-success w-100">Entrar</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card shadow-sm border-0 dashboard-card">
+                <div class="card-body text-center">
+                    <div class="icon-circle bg-warning mb-3">
+                        <i class="bi bi-cash-stack"></i>
+                    </div>
+                    <h5 class="fw-bold">Salarios de Empleados</h5>
+                    <a asp-controller="EmpleadoSalario" asp-action="Index" class="btn btn-warning w-100">Entrar</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card shadow-sm border-0 dashboard-card">
+                <div class="card-body text-center">
+                    <div class="icon-circle bg-danger mb-3">
+                        <i class="bi bi-file-earmark-bar-graph-fill"></i>
+                    </div>
+                    <h5 class="fw-bold">Generar Planilla</h5>
+                    <a asp-controller="Planilla" asp-action="Index" class="btn btn-danger w-100">Entrar</a>
+                </div>
+            </div>
         </div>
 
     </div>
+
+    <div class="text-center mt-4">
+        <a asp-controller="Home" asp-action="Index" class="btn btn-outline-dark px-4 py-2">
+            ⬅ Regresar al Panel Principal
+        </a>
+    </div>
+
 </div>
+
+<style>
+    .dashboard-card {
+        transition: transform .2s ease, box-shadow .2s ease;
+        border-radius: 15px;
+    }
+
+        .dashboard-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,.1);
+        }
+
+    .icon-circle {
+        width: 70px;
+        height: 70px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        font-size: 30px;
+        color: white;
+    }
+</style>
