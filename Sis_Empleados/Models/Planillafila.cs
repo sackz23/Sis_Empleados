@@ -10,5 +10,6 @@ namespace Sis_Empleados.Models
         public decimal SalarioBase { get; set; }
         public decimal TotalDeducciones { get; set; }
         public decimal SalarioNeto { get; set; }
+
     }
 }

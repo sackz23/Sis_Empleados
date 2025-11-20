@@ -1,0 +1,36 @@
+﻿@model Sis_Empleados.Models.Rol
+
+@{
+    ViewData["Title"] = "Eliminar Rol";
+}
+
+<div class="container mt-4">
+
+    <div class="card shadow border-0" style="max-width: 500px; margin: auto;">
+        <div class="card-body">
+
+            <h3 class="fw-bold text-danger mb-3">Eliminar Rol</h3>
+
+            <p>¿Está seguro que desea eliminar el siguiente rol?</p>
+
+            <ul class="list-group mb-3">
+                <li class="list-group-item"><strong>ID:</strong> @Model.Id_Rol</li>
+                <li class="list-group-item"><strong>Nombre Rol:</strong> @Model.Nombre_Rol</li>
+            </ul>
+
+            <form asp-action="Delete">
+                <input type="hidden" asp-for="Id_Rol" />
+
+                <button type="submit" class="btn btn-danger w-100">
+                    <i class="bi bi-trash"></i> Eliminar
+                </button>
+
+                <a asp-action="Index" class="btn btn-secondary w-100 mt-2">
+                    <i class="bi bi-arrow-left"></i> Cancelar
+                </a>
+            </form>
+
+        </div>
+    </div>
+
+</div>

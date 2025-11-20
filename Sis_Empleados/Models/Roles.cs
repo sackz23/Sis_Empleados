@@ -13,7 +13,7 @@ namespace Sis_Empleados.Models
         [Required, MaxLength(50)]
         public string Nombre_Rol { get; set; }
 
-        public virtual ICollection<Usuario> Usuarios { get; set; }
-        public virtual ICollection<Rol_Permiso> RolPermisos { get; set; }
+        public virtual ICollection<Usuario>? Usuarios { get; set; }
+        public virtual ICollection<Rol_Permiso>? RolPermisos { get; set; }
     }
 }

@@ -14,8 +14,7 @@ namespace Sis_Empleados.Models
         [Required]
         public int Id_TipoDeducciones { get; set; }
 
-        [Precision(5, 2)]
-        [Column(TypeName = "decimal(5,2)")]
+        [Column(TypeName = "decimal(10,2)")]
         public decimal Deduccion { get; set; }
 
         [ForeignKey("Id_TipoDeducciones")]

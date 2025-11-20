@@ -20,6 +20,7 @@ namespace Sis_Empleados.Controllers
             _context = context;
         }
 
+
         private List<PlanillaFila> ObtenerPlanilla(int idPeriodo)
         {
             var empleados = _context.Empleados
@@ -48,8 +49,7 @@ namespace Sis_Empleados.Controllers
 
                 foreach (var ded in detalles)
                 {
-                    var monto = (sal.Salario_Base * ded.Deduccion) / 100m;
-                    totalDeducciones += monto;
+                    totalDeducciones += ded.Deduccion;
                 }
 
                 lista.Add(new PlanillaFila()
