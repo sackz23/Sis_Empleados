@@ -4,11 +4,11 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Sis_Empleados.Controllers
 {
-    public class DepartamentosController : Controller
+    public class DepartamentosController : BaseController
     {
         private readonly ApplicationDbContext _context;
 
-        public DepartamentosController(ApplicationDbContext context)
+        public DepartamentosController(ApplicationDbContext context): base(context)
         {
             _context = context;
         }

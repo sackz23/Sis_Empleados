@@ -4,11 +4,11 @@ using Sis_Empleados.Models;
 
 namespace Sis_Empleados.Controllers
 {
-    public class RolesController : Controller
+    public class RolesController : BaseController
     {
         private readonly ApplicationDbContext _context;
 
-        public RolesController(ApplicationDbContext context)
+        public RolesController(ApplicationDbContext context): base(context)
         {
             _context = context;
         }

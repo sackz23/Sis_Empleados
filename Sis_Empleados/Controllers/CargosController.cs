@@ -4,11 +4,11 @@ using Sis_Empleados.Models;
 
 namespace Sis_Empleados.Controllers
 {
-    public class CargosController : Controller
+    public class CargosController : BaseController
     {
         private readonly ApplicationDbContext _context;
 
-        public CargosController(ApplicationDbContext context)
+        public CargosController(ApplicationDbContext context): base(context)
         {
             _context = context;
         }

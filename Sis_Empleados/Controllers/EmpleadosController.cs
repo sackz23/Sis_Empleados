@@ -1,14 +1,15 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Sis_Empleados.Models;
+using Sis_Empleados.Controllers; 
 
 namespace Sis_Empleados.Controllers
 {
-    public class EmpleadosController : Controller
+    public class EmpleadosController : BaseController
     {
         private readonly ApplicationDbContext _context;
 
-        public EmpleadosController(ApplicationDbContext context)
+        public EmpleadosController(ApplicationDbContext context): base(context)
         {
             _context = context;
         }
@@ -16,6 +17,7 @@ namespace Sis_Empleados.Controllers
         // LISTAR EMPLEADOS
         public IActionResult Index(string buscar, int? idDepartamento, int pagina = 1, int tamanoPagina = 10)
         {
+
             if (HttpContext.Session.GetInt32("UsuarioId") == null)
                 return RedirectToAction("Login", "Auth");
 
@@ -58,7 +60,6 @@ namespace Sis_Empleados.Controllers
             ViewBag.TotalPaginas = (int)Math.Ceiling((double)totalRegistros / tamanoPagina);
             ViewBag.Buscar = buscar;
             ViewBag.IdDepartamento = idDepartamento;
-
             return View(empleadosPagina);
         }
 
@@ -79,7 +80,7 @@ namespace Sis_Empleados.Controllers
 
         // CREAR (GET)
         public IActionResult Create()
-        {
+        { 
             if (HttpContext.Session.GetInt32("UsuarioId") == null)
                 return RedirectToAction("Login", "Auth");
 
