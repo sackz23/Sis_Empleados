@@ -16,6 +16,12 @@ namespace Sis_Empleados.Controllers
         // LISTAR
         public IActionResult Index(string buscar, int pagina = 1, int tamanoPagina = 10)
         {
+            // Si no hay sesión activa, redirige al login
+            if (HttpContext.Session.GetInt32("UsuarioId") == null)
+            {
+                return RedirectToAction("Login", "Auth");
+            }
+
             var roles = _context.Roles.AsQueryable();
 
             if (!string.IsNullOrEmpty(buscar))

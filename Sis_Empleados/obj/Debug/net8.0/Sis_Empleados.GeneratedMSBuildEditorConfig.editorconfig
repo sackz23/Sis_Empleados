@@ -17,217 +17,217 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Sis_Empleados
 build_property.RootNamespace = Sis_Empleados
-build_property.ProjectDir = D:\repos\Sis_Empleados\Sis_Empleados\
+build_property.ProjectDir = C:\Users\sergi\source\repos\Sis_Empleados\Sis_Empleados\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\repos\Sis_Empleados\Sis_Empleados
+build_property.MSBuildProjectDirectory = C:\Users\sergi\source\repos\Sis_Empleados\Sis_Empleados
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 8.0
 build_property.EnableCodeStyleSeverity = 
 
-[D:/repos/Sis_Empleados/Sis_Empleados/Views/Auth/Login.cshtml]
+[C:/Users/sergi/source/repos/Sis_Empleados/Sis_Empleados/Views/Auth/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/repos/Sis_Empleados/Sis_Empleados/Views/Cargos/Create.cshtml]
+[C:/Users/sergi/source/repos/Sis_Empleados/Sis_Empleados/Views/Cargos/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FyZ29zXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/repos/Sis_Empleados/Sis_Empleados/Views/Cargos/Delete.cshtml]
+[C:/Users/sergi/source/repos/Sis_Empleados/Sis_Empleados/Views/Cargos/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FyZ29zXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/repos/Sis_Empleados/Sis_Empleados/Views/Cargos/Details.cshtml]
+[C:/Users/sergi/source/repos/Sis_Empleados/Sis_Empleados/Views/Cargos/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FyZ29zXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/repos/Sis_Empleados/Sis_Empleados/Views/Cargos/Edit.cshtml]
+[C:/Users/sergi/source/repos/Sis_Empleados/Sis_Empleados/Views/Cargos/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FyZ29zXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/repos/Sis_Empleados/Sis_Empleados/Views/Cargos/Index.cshtml]
+[C:/Users/sergi/source/repos/Sis_Empleados/Sis_Empleados/Views/Cargos/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FyZ29zXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/repos/Sis_Empleados/Sis_Empleados/Views/Departamentos/Create.cshtml]
+[C:/Users/sergi/source/repos/Sis_Empleados/Sis_Empleados/Views/Departamentos/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0YW1lbnRvc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/repos/Sis_Empleados/Sis_Empleados/Views/Departamentos/Delete.cshtml]
+[C:/Users/sergi/source/repos/Sis_Empleados/Sis_Empleados/Views/Departamentos/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0YW1lbnRvc1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/repos/Sis_Empleados/Sis_Empleados/Views/Departamentos/Details.cshtml]
+[C:/Users/sergi/source/repos/Sis_Empleados/Sis_Empleados/Views/Departamentos/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0YW1lbnRvc1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/repos/Sis_Empleados/Sis_Empleados/Views/Departamentos/Edit.cshtml]
+[C:/Users/sergi/source/repos/Sis_Empleados/Sis_Empleados/Views/Departamentos/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0YW1lbnRvc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/repos/Sis_Empleados/Sis_Empleados/Views/Departamentos/Index.cshtml]
+[C:/Users/sergi/source/repos/Sis_Empleados/Sis_Empleados/Views/Departamentos/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0YW1lbnRvc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/repos/Sis_Empleados/Sis_Empleados/Views/DetalleDeduccion/Create.cshtml]
+[C:/Users/sergi/source/repos/Sis_Empleados/Sis_Empleados/Views/DetalleDeduccion/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGV0YWxsZURlZHVjY2lvblxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/repos/Sis_Empleados/Sis_Empleados/Views/DetalleDeduccion/Delete.cshtml]
+[C:/Users/sergi/source/repos/Sis_Empleados/Sis_Empleados/Views/DetalleDeduccion/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGV0YWxsZURlZHVjY2lvblxEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/repos/Sis_Empleados/Sis_Empleados/Views/DetalleDeduccion/Edit.cshtml]
+[C:/Users/sergi/source/repos/Sis_Empleados/Sis_Empleados/Views/DetalleDeduccion/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGV0YWxsZURlZHVjY2lvblxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/repos/Sis_Empleados/Sis_Empleados/Views/DetalleDeduccion/Index.cshtml]
+[C:/Users/sergi/source/repos/Sis_Empleados/Sis_Empleados/Views/DetalleDeduccion/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGV0YWxsZURlZHVjY2lvblxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/repos/Sis_Empleados/Sis_Empleados/Views/EmpleadoSalario/Create.cshtml]
+[C:/Users/sergi/source/repos/Sis_Empleados/Sis_Empleados/Views/EmpleadoSalario/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbGVhZG9TYWxhcmlvXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/repos/Sis_Empleados/Sis_Empleados/Views/EmpleadoSalario/Delete.cshtml]
+[C:/Users/sergi/source/repos/Sis_Empleados/Sis_Empleados/Views/EmpleadoSalario/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbGVhZG9TYWxhcmlvXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/repos/Sis_Empleados/Sis_Empleados/Views/EmpleadoSalario/Edit.cshtml]
+[C:/Users/sergi/source/repos/Sis_Empleados/Sis_Empleados/Views/EmpleadoSalario/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbGVhZG9TYWxhcmlvXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/repos/Sis_Empleados/Sis_Empleados/Views/EmpleadoSalario/Index.cshtml]
+[C:/Users/sergi/source/repos/Sis_Empleados/Sis_Empleados/Views/EmpleadoSalario/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbGVhZG9TYWxhcmlvXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/repos/Sis_Empleados/Sis_Empleados/Views/Empleados/Create.cshtml]
+[C:/Users/sergi/source/repos/Sis_Empleados/Sis_Empleados/Views/Empleados/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbGVhZG9zXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/repos/Sis_Empleados/Sis_Empleados/Views/Empleados/Delete.cshtml]
+[C:/Users/sergi/source/repos/Sis_Empleados/Sis_Empleados/Views/Empleados/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbGVhZG9zXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/repos/Sis_Empleados/Sis_Empleados/Views/Empleados/Details.cshtml]
+[C:/Users/sergi/source/repos/Sis_Empleados/Sis_Empleados/Views/Empleados/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbGVhZG9zXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/repos/Sis_Empleados/Sis_Empleados/Views/Empleados/Edit.cshtml]
+[C:/Users/sergi/source/repos/Sis_Empleados/Sis_Empleados/Views/Empleados/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbGVhZG9zXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/repos/Sis_Empleados/Sis_Empleados/Views/Empleados/Index.cshtml]
+[C:/Users/sergi/source/repos/Sis_Empleados/Sis_Empleados/Views/Empleados/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbGVhZG9zXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/repos/Sis_Empleados/Sis_Empleados/Views/Home/Index.cshtml]
+[C:/Users/sergi/source/repos/Sis_Empleados/Sis_Empleados/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/repos/Sis_Empleados/Sis_Empleados/Views/Home/Privacy.cshtml]
+[C:/Users/sergi/source/repos/Sis_Empleados/Sis_Empleados/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/repos/Sis_Empleados/Sis_Empleados/Views/Nomina/Index.cshtml]
+[C:/Users/sergi/source/repos/Sis_Empleados/Sis_Empleados/Views/Nomina/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm9taW5hXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/repos/Sis_Empleados/Sis_Empleados/Views/Periodos/Create.cshtml]
+[C:/Users/sergi/source/repos/Sis_Empleados/Sis_Empleados/Views/Periodos/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyaW9kb3NcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/repos/Sis_Empleados/Sis_Empleados/Views/Periodos/Edit.cshtml]
+[C:/Users/sergi/source/repos/Sis_Empleados/Sis_Empleados/Views/Periodos/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyaW9kb3NcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/repos/Sis_Empleados/Sis_Empleados/Views/Periodos/Index.cshtml]
+[C:/Users/sergi/source/repos/Sis_Empleados/Sis_Empleados/Views/Periodos/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyaW9kb3NcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/repos/Sis_Empleados/Sis_Empleados/Views/Planilla/Generar.cshtml]
+[C:/Users/sergi/source/repos/Sis_Empleados/Sis_Empleados/Views/Planilla/Generar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhbmlsbGFcR2VuZXJhci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/repos/Sis_Empleados/Sis_Empleados/Views/Planilla/GenerarPDF.cshtml]
+[C:/Users/sergi/source/repos/Sis_Empleados/Sis_Empleados/Views/Planilla/GenerarPDF.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhbmlsbGFcR2VuZXJhclBERi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/repos/Sis_Empleados/Sis_Empleados/Views/Planilla/Index.cshtml]
+[C:/Users/sergi/source/repos/Sis_Empleados/Sis_Empleados/Views/Planilla/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhbmlsbGFcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/repos/Sis_Empleados/Sis_Empleados/Views/Roles/Create.cshtml]
+[C:/Users/sergi/source/repos/Sis_Empleados/Sis_Empleados/Views/Roles/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZXNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/repos/Sis_Empleados/Sis_Empleados/Views/Roles/Delete.cshtml]
+[C:/Users/sergi/source/repos/Sis_Empleados/Sis_Empleados/Views/Roles/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZXNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/repos/Sis_Empleados/Sis_Empleados/Views/Roles/Edit.cshtml]
+[C:/Users/sergi/source/repos/Sis_Empleados/Sis_Empleados/Views/Roles/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZXNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/repos/Sis_Empleados/Sis_Empleados/Views/Roles/Index.cshtml]
+[C:/Users/sergi/source/repos/Sis_Empleados/Sis_Empleados/Views/Roles/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/repos/Sis_Empleados/Sis_Empleados/Views/Shared/Error.cshtml]
+[C:/Users/sergi/source/repos/Sis_Empleados/Sis_Empleados/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/repos/Sis_Empleados/Sis_Empleados/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/sergi/source/repos/Sis_Empleados/Sis_Empleados/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/repos/Sis_Empleados/Sis_Empleados/Views/TipoDeducciones/Create.cshtml]
+[C:/Users/sergi/source/repos/Sis_Empleados/Sis_Empleados/Views/TipoDeducciones/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGlwb0RlZHVjY2lvbmVzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/repos/Sis_Empleados/Sis_Empleados/Views/TipoDeducciones/Delete.cshtml]
+[C:/Users/sergi/source/repos/Sis_Empleados/Sis_Empleados/Views/TipoDeducciones/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGlwb0RlZHVjY2lvbmVzXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/repos/Sis_Empleados/Sis_Empleados/Views/TipoDeducciones/Edit.cshtml]
+[C:/Users/sergi/source/repos/Sis_Empleados/Sis_Empleados/Views/TipoDeducciones/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGlwb0RlZHVjY2lvbmVzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/repos/Sis_Empleados/Sis_Empleados/Views/TipoDeducciones/Index.cshtml]
+[C:/Users/sergi/source/repos/Sis_Empleados/Sis_Empleados/Views/TipoDeducciones/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGlwb0RlZHVjY2lvbmVzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/repos/Sis_Empleados/Sis_Empleados/Views/Usuarios/Create.cshtml]
+[C:/Users/sergi/source/repos/Sis_Empleados/Sis_Empleados/Views/Usuarios/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/repos/Sis_Empleados/Sis_Empleados/Views/Usuarios/Delete.cshtml]
+[C:/Users/sergi/source/repos/Sis_Empleados/Sis_Empleados/Views/Usuarios/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/repos/Sis_Empleados/Sis_Empleados/Views/Usuarios/Details.cshtml]
+[C:/Users/sergi/source/repos/Sis_Empleados/Sis_Empleados/Views/Usuarios/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/repos/Sis_Empleados/Sis_Empleados/Views/Usuarios/Edit.cshtml]
+[C:/Users/sergi/source/repos/Sis_Empleados/Sis_Empleados/Views/Usuarios/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/repos/Sis_Empleados/Sis_Empleados/Views/Usuarios/Index.cshtml]
+[C:/Users/sergi/source/repos/Sis_Empleados/Sis_Empleados/Views/Usuarios/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/repos/Sis_Empleados/Sis_Empleados/Views/_ViewImports.cshtml]
+[C:/Users/sergi/source/repos/Sis_Empleados/Sis_Empleados/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/repos/Sis_Empleados/Sis_Empleados/Views/_ViewStart.cshtml]
+[C:/Users/sergi/source/repos/Sis_Empleados/Sis_Empleados/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/repos/Sis_Empleados/Sis_Empleados/Views/Shared/_Layout.cshtml]
+[C:/Users/sergi/source/repos/Sis_Empleados/Sis_Empleados/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-gxhewyy2bt

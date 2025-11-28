@@ -31,10 +31,7 @@
     <div class="col-md-4">
         <button type="submit" class="btn btn-primary">Filtrar</button>
         <a asp-action="Index" class="btn btn-secondary">Limpiar</a>
-        @if(ViewBag.Rol == "Administrador")
-        {
         <a asp-action="Create" class="btn btn-success float-end">+ Nuevo empleado</a>
-        }
     </div>
 </form>
 
@@ -62,9 +59,10 @@
                 <td>@emp.Telefono</td>
                 <td>@(emp.Activo ? "Sí" : "No")</td>
                 <td>
-                    @if(ViewBag.Rol == "Administrador")
-                    {
+                    
                         <a asp-action="Details" asp-route-id="@emp.Id_Empleado" class="btn btn-info btn-sm">Ver</a>
+                    @if (ViewBag.Rol == "Administrador")
+                    {
                         <a asp-action="Edit" asp-route-id="@emp.Id_Empleado" class="btn btn-warning btn-sm">Editar</a>
                         <a asp-action="Delete" asp-route-id="@emp.Id_Empleado" class="btn btn-danger btn-sm">Eliminar</a>
                     }

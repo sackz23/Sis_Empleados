@@ -19,12 +19,9 @@
     <div class="col-md-6">
         <button class="btn btn-primary">Buscar</button>
         <a asp-action="Index" class="btn btn-secondary">Limpiar</a>
-        @if(ViewBag.Rol == "Administrador")
-        {
         <a asp-action="Create" class="btn btn-success float-end">
                 + Nuevo cargo
         </a>
-        }
     </div>
 </form>
 
@@ -44,9 +41,9 @@
                 <td>@c.Cargo_De_Empleado</td>
                 <td>@c.Departamento?.Departamento_De_Trabajo</td>
                 <td>
-                    @if(ViewBag.Rol == "Administrador")
-                    {
                         <a asp-action="Details" asp-route-id="@c.Id_CargoEmpleado" class="btn btn-info btn-sm">Ver</a>
+                    @if (ViewBag.Rol == "Administrador")
+                    {
                         <a asp-action="Edit" asp-route-id="@c.Id_CargoEmpleado" class="btn btn-warning btn-sm">Editar</a>
                         <a asp-action="Delete" asp-route-id="@c.Id_CargoEmpleado" class="btn btn-danger btn-sm">Eliminar</a>
                     }
